@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table align="center">
+  <tr>
+    <th>Amount</th>
+    <th>From Currency</th>
+    <th>To Currency</th>
+  </tr>
+  <tr>
+    <td>
+    <input type="text" id="a">
+    </td>
+    <td align="center">
+      <select id="b">
+      <option value="VND">VND</option>
+      <option value="USD">USD</option>
+    </select>
+    </td>
+    <td align="center">
+      <select id="c">
+      <option value="VND">VND</option>
+      <option value="USD">USD</option>
+    </select>
+    </td>
+    <td>
+      <button  onclick="exchange()">Convert</button>
+    </td>
+  </tr>
+</table>
+<h1 id="result"></h1>
+
+<script >
+  function exchange() {
+    let x = document.getElementById("a").value;
+    let y = document.getElementById("b").value;
+    let z = document.getElementById("c").value;
+    let Result;
+    if (y == "USD" && z == "VND")
+    {
+      Result = x * 23000;
+    }
+
+
+    else if (y == "VND" && z == "USD")
+    {
+      Result = x / 23000;
+    }
+
+
+    else if (y == "VND" && z == "VND")
+    {
+      Result = x;
+    }
+
+    document.getElementById("result").innerHTML = Result;
+
+  }
+</script>
+
+</body>
+</html>
