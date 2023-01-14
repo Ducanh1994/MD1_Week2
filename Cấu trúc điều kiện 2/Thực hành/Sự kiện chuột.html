@@ -6,5 +6,21 @@
 </head>
 <body>
 
+    <img id="photo" src="https://th.bing.com/th/id/R.37ccbc92c78d8b4ad3d6323bba1901c5?rik=809%2f%2fXgmU4jElw&riu=http%3a%2f%2fpngimg.com%2fuploads%2ffootball%2ffootball_PNG1082.png&ehk=nktVfbssuUhkRIRc7IoRhiSrM6251JcNglbOs0DlwPo%3d&risl=&pid=ImgRaw&r=0" alt="", style="width:30%">
+    <p>Click button bellow to move the image to right</p>
+    <button onclick="moveright()">Click me</button>
+
+<script>
+    // let img = document.getElementById("photo");
+    function init() {
+        img = document.getElementById("photo");
+        img.style.position = "relative";
+        img.style.left = "0px";
+    }
+    function moveright() {
+        img.style.left = parseInt(img.style.left) + 10 + "px";
+    }
+    window.onload = init;
+</script>
 </body>
 </html>

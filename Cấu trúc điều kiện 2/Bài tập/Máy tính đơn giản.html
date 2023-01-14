@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1><input id="a" type="text" value=""></h1>
+<table>
+  <tr>
+    <td><button onclick="an('1')" value="1">1</button></td>
+    <td><button onclick="an('2')" value="2">2</button></td>
+    <td><button onclick="an('3')" value="3">3</button></td>
+    <td><button onclick="an('+')" value="+" >+</button></td>
+  </tr>
+  <tr>
+    <td><button onclick="an('4')" value="4">4</button></td>
+    <td><button onclick="an('5')" value="5">5</button></td>
+    <td><button onclick="an('6')" value="6">6</button></td>
+    <td><button onclick="an('-')" value="-">-</button></td>
+  </tr>
+  <tr>
+    <td><button onclick="an('7')" value="7">7</button></td>
+    <td><button onclick="an('8')" value="8">8</button></td>
+    <td><button onclick="an('9')" value="9">9</button></td>
+    <td><button onclick="an('*')" value="*">*</button></td>
+  </tr>
+  <tr>
+    <td><button onclick="xoa()" value="">C</button></td>
+    <td><button onclick="an('0')" value="0">0</button></td>
+    <td><button onclick="bang()">=</button></td>
+    <td><button onclick="an('/')" value="/">/</button></td>
+  </tr>
+</table>
+<script>
+function an(value) {
+  document.getElementById("a").value += value;
+}
+function xoa() {
+  document.getElementById("a").value = "";
+}
+function bang() {
+  document.getElementById("a").value = eval(document.getElementById("a").value);
+}
+</script>
+</body>
+</html>
