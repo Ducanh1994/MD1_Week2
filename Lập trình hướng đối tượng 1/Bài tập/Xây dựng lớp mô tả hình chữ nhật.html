@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class Rectangle {
+    constructor(chieudai,chieurong) {
+     this.chieudai = chieudai;
+     this.chieurong = chieurong;
+    }
+    dientich () {
+     return  this.chieudai * this.chieurong;
+    }
+    chuvi() {
+      return (this.chieudai + this.chieurong) *2;
+    }
+    getI4() {
+      alert ("diện tích hình chữ nhật là  " + this.dientich() + " , " + " chu vi hình chữ nhật là  " +  this.chuvi()
+      )
+    }
+  }
+let hcn1 = new Rectangle(10,20);
+  hcn1.getI4();
+</script>
+</body>
+</html>

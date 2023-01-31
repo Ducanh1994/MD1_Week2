@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 1
+    // function alertmessage() {
+    //     alert( "xinchao" );
+    // }
+    // alertmessage()
+
+
+    //Bài 2
+    // function price(a){
+    //     return ++a;
+    // }
+    // let a = +prompt();
+    // sum = price(a)
+    // alert(sum);
+
+
+    // Bài 3
+    // function arr(a,b){
+    //     if (a>b) {
+    //         alert("a lơn hơn b")
+    //     }
+    //     else {
+    //         return a+b;
+    //     }
+    // }
+    // a = +prompt();
+    // b = +prompt();
+    // rs = arr(a,b);
+    // document.write(rs);
+
+
+    // // Bài 4
+    // function addNumbers() {
+    //     firstNum = 4;
+    //     secondNum = 8;
+    //     result = firstNum + secondNum;
+    //     return result;
+    // }
+    // result = 0;
+    // alert(result);
+    // result = addNumbers();
+    // alert(result);
+
+
+    //Bài 5
+    let arr1 = [Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe, Regulus]
+    let arr2 = [UrsaMinor, Tarurus, Cygnus, Lyra, Aquila, UrsaMajor, Leo]
+
+    function arr(nhapvao) {
+        let index_arr;
+        let result;
+        for (let i = 0; i < arr1.length; i++) {
+            if (nhapvao === arr1[i]) {
+                index_arr = i;
+                for (let j = 0; j < arr2.length; j++) {
+                    if (index_arr === i) {
+                        result = arr2[j];
+                        return result;
+                    } else {
+                        result = "sai"
+                        return result;
+                    }
+                }
+            } else {
+                result = "sai";
+                return result;
+            }
+        }
+    }
+    let nhapvao = prompt();
+    document.write(arr());
+
+
+</script>
+</body>
+</html>

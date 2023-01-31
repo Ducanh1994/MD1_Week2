@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="https://th.bing.com/th/id/R.0db0838db35fc56b52553bfdd4f0ac76?rik=t%2b6LHeBrVP83Pg&pid=ImgRaw&r=0" id="anh"
+     alt=""
+     style="width: 150px;
+     height: 150px;
+     border-radius: 50%;
+     position: relative;
+     top: 0;
+     left: 0; ">
+<script>
+
+  let x = document.getElementById("anh");
+  let speedx = 1;
+  let speedy = 1;
+  setInterval(() => {
+    x.style.left = parseInt(x.style.left) + speedx + 'px';
+    x.style.top = parseInt(x.style.top) + speedy + 'px';
+    if (parseInt(x.style.top) >= window.innerWidth -350 || parseInt(x.style.top <=0)) {
+        speedy = -speedy }
+    if (parseInt(x.style.left) >= window.innerWidth -400 || parseInt(x.style.left <=0)) {
+            speedx = -speedx
+    }
+  }, 1)
+</script>
+</body>
+</html>

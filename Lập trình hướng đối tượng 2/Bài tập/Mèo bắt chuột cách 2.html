@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class Rat {
+    constructor(name,weight,speed,status) {
+      this.name = name;
+      this.weight =weight;
+      this.speed = speed;
+      this.status = true;
+      this.getName = function (){
+        return this.name;
+      }
+      this.getWeight = function (){
+        return this.weight;
+      }
+      this.getSpeed = function (){
+        return this.speed
+      }
+      this.getStatus = function (){
+        return this.status
+      }
+    }
+    getvoice(){
+      alert("chit chit")
+    }
+
+  }
+  class Cat {
+    constructor(name,weight,speed) {
+      this.name = name;
+      this.weight =weight;
+      this.Maxspeed = speed;
+      this.getName = function (){
+        return this.name;
+      }
+      this.getWeight = function (){
+        return this.weight;
+      }
+      this.getMaxSpeed = function (){
+        return this.Maxspeed
+      }
+    }
+    getVoice(){
+      alert("meo meo")
+    }
+  }
+  let chuot = new Rat('Jery',2,5,true);
+  let meo = new Cat('Tom',3,6)
+  // đây là một giá trị tạm
+  function abc(){
+    if(chuot.getStatus() === true){
+      if(meo.getMaxSpeed() > chuot.getSpeed() ){
+        meo.weight += chuot.weight
+        // cộng gia trị của mèo và chuột
+        // không được cộng thuộc tính bên trên
+      }
+      alert("can nang cua meo " + meo.weight);
+    }
+
+  }
+  chuot.getvoice();
+  meo.getVoice();
+  abc();
+
+</script>
+</body>
+</html>

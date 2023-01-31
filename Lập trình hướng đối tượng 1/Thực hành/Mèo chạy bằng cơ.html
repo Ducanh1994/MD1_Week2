@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="https://th.bing.com/th/id/R.0db0838db35fc56b52553bfdd4f0ac76?rik=t%2b6LHeBrVP83Pg&pid=ImgRaw&r=0" id="anh"
+     alt=""
+     style="width: 150px;
+     height: 150px;
+     border-radius: 50%;
+     position: relative;
+     top: 0;
+     left: 0;
+     transition: 1s">
+<button onclick="phai()">Sang phải</button>
+<button onclick="trai()">Sang trái</button>
+<button onclick="tren()">Lên trên</button>
+<button onclick="duoi()">Xuống dưới</button>
+<script>
+
+    let x = document.getElementById("anh");
+    function phai() {
+        x.style.left = parseInt(x.style.left) + 100 + "px";
+    }
+
+    function trai() {
+        x.style.left = parseInt(x.style.left) - 100 + "px";
+    }
+
+    function tren() {
+        x.style.top = parseInt(x.style.top) - 100 + "px";
+    }
+
+    function duoi() {
+        x.style.top = parseInt(x.style.top) + 100 + "px";
+    }
+
+    window.addEventListener('keydown', (e) => {
+        console.log(e)
+        if (e.key == 'a') {
+            x.style.left = parseInt(x.style.left) - 100 + "px";
+        }
+        if (e.key == 'd') {
+            x.style.left = parseInt(x.style.left) + 100 + "px";
+        }
+    })
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập từ </label>
+<input type="text" id="search">
+<button type="button" onclick="showMessage()">Dịch</button>
+<p id="rs"></p>
+
+<script>
+    function showMessage() {
+        let anh = ["hello", "hi"]
+        let viet = ["Xin Chào", "Chào"];
+        let a = document.getElementById("search").value;
+        let result = "";
+        let newindex = 0;
+        for (let i = 0; i < anh.length; i++) {
+            if (a === anh[i]) {
+                newindex = i;
+            }
+            for (let j = 0; j < viet.length; j++) {
+                if (newindex === j) {
+                    result = viet[j];
+                    document.getElementById("rs").innerHTML = result;
+                }
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

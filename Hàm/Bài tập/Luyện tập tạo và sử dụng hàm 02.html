@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   // Bài 1
+  // function binhphuong(nhapvao) {
+  //   x = nhapvao*2;
+  //   return x;
+  // }
+  // nhapvao = +prompt();
+  // document.write(binhphuong(nhapvao));
+
+  // Bài 2
+  //  function dientichhinhtron(nhapvao) {
+  //     s = (nhapvao*2)*3.14;
+  //     return s;
+  //  }
+  //   nhapvao = +prompt();
+  //   document.write(dientichhinhtron(nhapvao));
+
+  // Bài 3
+// function tinhgiaithua(nhapvao) {
+//     let sum = 1;
+//     for ( let i = 2; i <= nhapvao; i++ )
+//         sum = sum * i;
+//         return sum;
+//
+// }
+// nhapvao = +prompt();
+// document.write(tinhgiaithua(nhapvao));
+
+// Bài 3 cách 2
+//    function tinhgiaithua(num)
+//    {
+//        if (num === 0)
+//        { return 1; }
+//        else
+//        { return num * tinhgiaithua( num - 1 ); }
+//    }
+//    num = +prompt();
+//    document.write(tinhgiaithua(num));
+
+  // Bai 4
+//    function kiemtra(nhapvao) {
+//        if (nhapvao % 1 === 0) {
+//            alert ("True"); }
+//        else { alert ("False");
+//        }
+//    }
+// nhapvao = prompt();
+//    kiemtra(nhapvao);
+
+
+//   Bài 5
+// function kiemtra(a,b,c) {
+//     if (a > b && a >c) {
+//         alert (a) }
+//     else if (b > c) {
+//         alert (b) }
+//     else { alert (c)
+//     }
+// }
+// a = +prompt();
+// b = +prompt();
+// c = +prompt();
+// kiemtra(a,b,c);
+
+
+  // Bài 6
+// function kiemtra(nhapso) {
+//     if (nhapso % 1 === 0 && nhapso > 0) {
+//         alert ("True")
+//     }
+//     else {
+//         alert ("False")
+//     }
+// }
+// nhapso = prompt();
+// kiemtra(nhapso);
+
+
+
+ //  Bài 7
+//    let arr = [1,2];
+//    function daonguoc (arr) {
+//       return  arr.reverse()
+//    }
+// document.write(daonguoc(arr));
+
+  // Bài 8
+  //  let arr = [2,0,-9,1,4,5,-1,13];
+  //  function daonguoc (arr) {
+  //      return  arr.reverse()
+  //  }
+  //  document.write(daonguoc(arr));
+
+
+  // Bài 9
+
+   function check_arr(element,arr){
+       let count = 0;
+       for (let i = 0; i < arr.length; i ++){
+           if (arr[i] === element)  {
+               count ++;
+               break
+           }
+       }
+       return (count >0) ? true : false
+   }
+
+   let arr = ['a', "bp", 'c'];
+
+
+   console.log(check_arr("bp", arr));
+   //> true
+
+   console.log(check_arr('d', arr));
+   //> false
+</script>
+</body>
+</html>

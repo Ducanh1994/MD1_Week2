@@ -6,33 +6,64 @@
 </head>
 <body>
 <script>
-    function checkNT(number){ // khai báo tham số number
+    function checkNT(number) { // khai báo tham số number
         let count = 0;  // khai báo số lượng số ước bằng 0
         let countSNT = 0; // khai báo số lượng SNT bằng 0
-        for(let i =2; ;i++){  //dùng hàm lặp for để kiểm tra các số từ 2
-            if(countSNT < number){ // nếu số thoả mãn, đi tới điều kiện số lượng SNT < tham số number
-                for (let j = 1; j<=i ; j++){ // nếu thoả mãn khai báo j = 1 và chạy tới chính số đó
-                    if(i % j === 0) { // mà count chỉ bằng 2 thì in ra i
+        for (let i = 2; ; i++) {  //dùng hàm lặp for để kiểm tra các số từ 2
+            if (countSNT < number) { // nếu số thoả mãn, đi tới điều kiện số lượng SNT < tham số number
+                for (let j = 1; j <= i; j++) { // nếu thoả mãn khai báo j = 1 và chạy tới chính số đó
+                    if (i % j === 0) { // mà count chỉ bằng 2 thì in ra i
                         count += 1;
                     }
                 }
-                if(count === 2){
+                if (count === 2) {
                     document.write(i + "<br>");
                     countSNT += 1; // sau khi in ra i cộng thêm countSNT 1
                 }
-                count = 0; // reset lại count
-            }else { // nếu countSNT > number thì dừng lại
+                    count = 0; // reset lại count
+            } else { // nếu countSNT > number thì dừng lại
                 break;
             }
         }
     }
+
     let number = parseInt(prompt(" nhap so luong so nguyen to can in ra"));//nhâp số
     checkNT(number);//chạy hàm
-    // bước 1: nhập số bất kì
-    //bước 2: kiểm tra từ 1 đến chính nó xem nó có chia kết cho số nào hay không
-    // count chỉ sống trong {}
-    // Biến cờ hiệu là cách giải quyết tối ưu hơn
-    // cái nào là tập con của cái nào
+    // // bước 1: nhập số bất kì
+    // //bước 2: kiểm tra từ 1 đến chính nó xem nó có chia kết cho số nào hay không
+    // // count chỉ sống trong {}
+    // // Biến cờ hiệu là cách giải quyết tối ưu hơn
+    // // cái nào là tập con của cái nào
+
+    //
+    // function checkSNT(number) {
+    //     let demsouoc = 0
+    //     if (number < 2) {
+    //         return false
+    //
+    //     }
+    //     for (let i = 1; i <= number; i++) {
+    //         if (number % i === 0) {
+    //             demsouoc++
+    //         }
+    //
+    //     }
+    //     if (demsouoc === 2) {
+    //         return true
+    //     }
+    //
+    // }
+    //
+    // let number = +prompt('Nhap so luong SNT can in')
+    // let count = 0
+    // for (let i = 2; count < number; i++) {
+    //     if (checkSNT(i)) {
+    //         count++
+    //         document.write(`So nguyen to thu ${count} la ` + i + '<br>')
+    //     }
+    // }
+
+
 </script>
 </body>
 </html>

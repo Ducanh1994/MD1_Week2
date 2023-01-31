@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+// class meo {
+//   constructor(name, weight) {
+//     this.name = name;
+//     this.weight = weight;
+//   }
+//
+//   eat(foodwweight) {
+//     this.weight += foodwweight;
+//   }
+//   getI4() {
+//     alert(this.name + " có cân nặng là " + this.weight);
+//   }
+// }
+// let cat1 = new cat('Tom',12);
+// let cat2 = new cat('Lisa',15)
+
+
+class cat {
+  constructor(name, weight) {
+    this.name = name;
+    this.weight = weight;
+  }
+  eat (mx) {
+      this.weight += mx.weight/2;
+      mx.isDie = true;
+  }
+  getI4() {
+   alert (this.name + " có cân nặng là" + this.weight);
+  }
+}
+class mouse {
+    constructor(name,weight) {
+        this.name = name;
+        this.weight = weight;
+        this.isDie = false;
+    }
+    getI4() {
+        if(this.isDie) // điều kiện mặc định hiểu là true
+        {
+            alert(this.name + " đã chết")
+        }
+        else {
+            alert(this.name + " có cân nặng là" + this.weight)
+        }
+    }
+}
+let c1 = new cat('Tom',12);
+let m1 = new mouse('chuot cong',5);
+c1.eat(m1);
+c1.getI4();
+m1.getI4();
+</script>
+</body>
+</html>
